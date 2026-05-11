@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athul & Roopendu - Engagement Invitation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Floating petals background -->
+    <div class="petals">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="couple-names">
+                <span class="bride-name">Roopendu S Rajeev</span>
+                <span class="ampersand">&</span>
+                <span class="groom-name">Athul A</span>
+            </h1>
+            <p class="wedding-tagline">Forever Begins Here</p>
+        </div>
+    </section>
+
+    <!-- Date Reveal Section -->
+    <section class="date-reveal">
+        <div class="glass-card">
+            <h2>Our Engagement Day</h2>
+            <div class="scratch-container">
+                <div class="date-display">Sunday, May 31, 2026</div>
+                <canvas id="scratchCanvas" width="400" height="80"></canvas>
+            </div>
+            <p class="scratch-instruction">Scratch to reveal our engagement date!</p>
+        </div>
+    </section>
+
+    <!-- Our Love Story Section -->
+    <section class="love-story">
+        <div class="glass-card">
+            <h2>Our Love Story</h2>
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="images/IMG-20260112-WA0016.jpg" alt="Our Love Story"
+                        onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjJDRjRDQiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjI0IiBmaWxsPSIjOTk5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+T3VyIExvdmUgU3Rvcnk8L3RleHQ+PC9zdmc+';">
+                </div>
+                <div class="story-text">
+                    <p>Every love story is beautiful, but ours is our favorite. From the moment we met, we knew there
+                        was something special between us. Through laughter, adventures, and countless memories, our bond
+                        has grown stronger each day.</p>
+                    <p>Now, we're excited to take the next step in our journey together. Join us as we celebrate this
+                        beautiful beginning!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp">
+        <div class="glass-card">
+            <h2>Join Us!</h2>
+            <p id="rsvpMessage">We can't wait to celebrate our engagement with you! Please join us for this special
+                moment.</p>
+            <div class="countdown">
+                <h3>Countdown to Our Engagement</h3>
+                <div class="countdown-timer" id="countdownTimer">
+                    <div class="time-unit">
+                        <span class="number" id="days">20</span>
+                        <span class="label">Days</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="number" id="hours">12</span>
+                        <span class="label">Hours</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="number" id="minutes">48</span>
+                        <span class="label">Minutes</span>
+                    </div>
+                    <div class="time-unit">
+                        <span class="number" id="seconds">32</span>
+                        <span class="label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

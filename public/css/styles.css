@@ -1,0 +1,119 @@
+body {
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #c7ceea 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #d4a574;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  color: #666;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.date-section {
+  margin: 30px 0;
+}
+
+.date-section h2 {
+  color: #8b5a3c;
+  margin-bottom: 20px;
+}
+
+.scratch-container {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.date-display {
+  font-size: 1.8em;
+  color: #333;
+  background: linear-gradient(45deg, #ffd700, #ffed4e);
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+#scratchCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: crosshair;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.instruction {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.gallery-section {
+  margin-top: 40px;
+}
+
+.gallery-section h2 {
+  color: #8b5a3c;
+  margin-bottom: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.image-gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

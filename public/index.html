@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Wedding Card</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>We're Getting Married!</h1>
+      <p class="message">Join us in celebrating our special day</p>
+
+      <div class="date-section">
+        <h2>Wedding Date</h2>
+        <div class="scratch-container">
+          <div class="date-display">October 10, 2023</div>
+          <canvas id="scratchCanvas" width="300" height="60"></canvas>
+        </div>
+        <p class="instruction">Scratch to reveal the date!</p>
+      </div>
+
+      <div class="gallery-section">
+        <h2>Our Memories</h2>
+        <div class="image-gallery" id="imageGallery">
+          <!-- Images will be loaded here dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,363 @@
+/* CSS Variables for color palette */
+:root {
+  --rose-gold: #C9967A;
+  --champagne-gold: #D4AF37;
+  --ivory: #FFF8F0;
+  --blush: #F2C4CE;
+  --deep-plum: #4A1942;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(135deg, var(--blush) 0%, var(--ivory) 50%, var(--deep-plum) 100%);
+  color: var(--deep-plum);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Floating Petals Animation */
+.petals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: linear-gradient(45deg, var(--blush), var(--rose-gold));
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: float 10s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.couple-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: var(--champagne-gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.bride-name, .groom-name {
+  display: inline-block;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+.ampersand {
+  font-size: 3rem;
+  color: var(--rose-gold);
+  margin: 0 20px;
+}
+
+@keyframes shimmer {
+  0%, 100% { color: var(--champagne-gold); }
+  50% { color: var(--rose-gold); }
+}
+
+.wedding-tagline {
+  font-size: 1.5rem;
+  color: var(--deep-plum);
+  font-style: italic;
+}
+
+/* Date Reveal Section */
+.date-reveal {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.date-reveal h2 {
+  font-size: 2.5rem;
+  color: var(--champagne-gold);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.scratch-container {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0;
+}
+
+.date-display {
+  font-size: 2rem;
+  color: var(--deep-plum);
+  background: linear-gradient(45deg, var(--champagne-gold), var(--rose-gold));
+  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  font-weight: bold;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: crosshair;
+  border-radius: 15px;
+  z-index: 2;
+}
+
+.scratch-instruction {
+  text-align: center;
+  color: var(--deep-plum);
+  font-size: 1.1rem;
+  margin-top: 20px;
+  opacity: 0.8;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery h2 {
+  font-size: 2.5rem;
+  color: var(--champagne-gold);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+  transition: transform 0.5s ease;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  color: var(--deep-plum);
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.carousel-btn:hover {
+  background: var(--champagne-gold);
+  color: white;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Event Details Section */
+.event-details {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.event-details h2 {
+  font-size: 2.5rem;
+  color: var(--champagne-gold);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.detail-item {
+  text-align: center;
+  padding: 20px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border: 1px solid var(--glass-border);
+}
+
+.detail-item h3 {
+  color: var(--rose-gold);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.detail-item p {
+  color: var(--deep-plum);
+  font-size: 1.1rem;
+}
+
+/* RSVP Section */
+.rsvp {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.rsvp h2 {
+  font-size: 2.5rem;
+  color: var(--champagne-gold);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#rsvpMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--deep-plum);
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.countdown {
+  text-align: center;
+}
+
+.countdown h3 {
+  color: var(--rose-gold);
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  min-width: 80px;
+}
+
+.number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--champagne-gold);
+}
+
+.label {
+  font-size: 0.9rem;
+  color: var(--deep-plum);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .couple-names {
+    font-size: 3rem;
+  }
+  
+  .glass-card {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  
+  .carousel img {
+    height: 300px;
+  }
+  
+  .countdown-timer {
+    gap: 10px;
+  }
+  
+  .time-unit {
+    min-width: 60px;
+    padding: 10px;
+  }
+  
+  .number {
+    font-size: 1.5rem;
+  }
+}
