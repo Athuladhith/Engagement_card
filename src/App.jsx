@@ -2,8 +2,7 @@ import React from 'react'
 import './App.css'
 import Hero from './components/Hero'
 import DateReveal from './components/DateReveal'
-import Gallery from './components/Gallery'
-import EventDetails from './components/EventDetails'
+import LoveStory from './components/LoveStory'
 import RSVP from './components/RSVP'
 import Petals from './components/Petals'
 
@@ -13,8 +12,7 @@ function App() {
       <Petals />
       <Hero />
       <DateReveal />
-      <Gallery />
-      <EventDetails />
+      <LoveStory />
       <RSVP />
     </div>
   )

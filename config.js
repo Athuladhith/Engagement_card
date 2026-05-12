@@ -11,9 +11,11 @@ export const config = {
   venue: "Town Bank Auditorium",
   ceremonyTime: "11:00 AM - 12:00 PM",
 
-  // List of image filenames in the images/ folder
-  // Add your photo filenames here (e.g., "couple1.jpg", "engagement2.png")
+  // Featured scratch-card image and gallery image filenames in the images/ folder
+  featuredImage: "IMG-20260112-WA0016.jpg",
   images: [
+    "IMG-20260112-WA0016.jpg",
+    "engagement-placeholder.jpg",
     "engagement-dummy.jpg"
   ],
 

@@ -134,30 +134,59 @@ body {
   text-align: center;
 }
 
-.scratch-container {
+.scratch-card {
   position: relative;
-  display: inline-block;
-  margin: 30px 0;
+  max-width: 380px;
+  margin: 0 auto;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.scratch-image {
+  width: 100%;
+  aspect-ratio: 380 / 240;
+  display: block;
+  object-fit: cover;
+  filter: contrast(1.05) brightness(0.9);
+}
+
+.scratch-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.22), rgba(255,255,255,0) 35%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.22) 2px, rgba(255,255,255,0.12) 2px, rgba(255,255,255,0.12) 8px),
+    rgba(194, 183, 172, 0.88);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(2px);
 }
 
 .date-display {
-  font-size: 2rem;
-  color: var(--deep-plum);
-  background: linear-gradient(45deg, var(--champagne-gold), var(--rose-gold));
-  padding: 20px 40px;
-  border-radius: 15px;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
   position: relative;
+  font-size: 1.5rem;
+  color: var(--deep-plum);
+  background: rgba(255, 248, 240, 0.95);
+  padding: 18px 30px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  font-weight: 700;
   z-index: 1;
-  font-weight: bold;
+  text-align: center;
+  max-width: 100%;
 }
 
-canvas {
+.scratch-overlay canvas {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   cursor: crosshair;
-  border-radius: 15px;
   z-index: 2;
 }
 
@@ -165,8 +194,58 @@ canvas {
   text-align: center;
   color: var(--deep-plum);
   font-size: 1.1rem;
-  margin-top: 20px;
-  opacity: 0.8;
+  margin-top: 24px;
+  opacity: 0.9;
+}
+
+/* Love Story Section */
+.love-story {
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.love-story h2 {
+  font-size: 2.5rem;
+  color: var(--champagne-gold);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.story-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+.story-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.story-text {
+  color: var(--deep-plum);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.story-text p {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .story-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Gallery Section */
