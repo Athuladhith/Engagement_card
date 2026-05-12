@@ -1,5 +1,5 @@
-// Configuration file - EDIT THIS to customize your engagement card
-const config = {
+﻿// Configuration file - EDIT THIS to customize your engagement card
+export const config = {
   // Couple names
   brideName: "Roopendu S Rajeev",
   groomName: "Athul A",
