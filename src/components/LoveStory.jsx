@@ -13,7 +13,7 @@ function LoveStory() {
               src={`/images/${image}`}
               alt="Our Love Story"
               onError={(e) => {
-                e.currentTarget.src = '/images/engagement-placeholder.jpg'
+                e.currentTarget.src = '/images/IMG-20260112-WA0016.jpg'
               }}
             />
           </div>
